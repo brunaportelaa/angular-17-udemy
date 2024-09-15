@@ -12,6 +12,7 @@ import { DUMMY_USERS } from '../../dummy-users';
 
 export class UserComponent {
   
+  id = input.required<string>()
   avatar = input.required<string>()
   name = input.required<string>()
 
