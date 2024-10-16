@@ -1,7 +1,7 @@
 <div class="backdrop" (click)="onCancel()"></div>
 <dialog open>
   <h2>Add Task</h2>
-  <form>
+  <form (ngSubmit)="onSubmit($event)">
     <p>
       <label for="title">Title</label>
       <input type="text" id="title" name="title" [(ngModel)]="enteredTitle" />
@@ -9,7 +9,7 @@
 
     <p>
       <label for="summary">Summary</label>
-      <textarea id="summary" rows="5" name="summary" [(ngModel)]="enteredDescription"></textarea>
+      <textarea id="summary" rows="5" name="summary" [(ngModel)]="enteredSummary"></textarea>
     </p>
 
     <p>
